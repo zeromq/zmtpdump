@@ -295,5 +295,5 @@ Wireshark.
 
 * ZMTP spec: http://zmtp.org/page:read-the-docs
 * libpcap: http://www.tcpdump.org/pcap.html
-* ZeroMQ home page: http://zeromq.org/
-* Wireshark: wireshark.org
+* ZeroMQ home page: http://zeromq.org
+* Wireshark: http://wireshark.org

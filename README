@@ -1,6 +1,6 @@
 # zmtpdump, ZMTP packet analyzer
 
-## Intruduction
+## Introduction
 
 zmtpdump is a packet analyzer (also known as sniffer) of ZeroMQ Transport
 Protocol. It currently supports ZMTP 3.0 only.
@@ -293,7 +293,7 @@ Wireshark.
 
 ## References
 
-ZMTP spec: http://zmtp.org/page:read-the-docs
-libpcap: http://www.tcpdump.org/pcap.html
-ZeroMQ home page: http://zeromq.org/
-Wireshark: wireshark.org
+* ZMTP spec: http://zmtp.org/page:read-the-docs
+* libpcap: http://www.tcpdump.org/pcap.html
+* ZeroMQ home page: http://zeromq.org/
+* Wireshark: wireshark.org

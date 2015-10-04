@@ -18,7 +18,7 @@ exchanging messages.
 ### What zmtpdump does not do
 
 * It does not support older versions of ZMTP (1.0 and 2.0).
-* It does currently support other security mechanism than NULL (ZMTP
+* It does not currently support other security mechanism than NULL (ZMTP
 specification mentions PLAIN and CURVE).
 * It does not support other transports than TCP, such as Unix sockets.
 

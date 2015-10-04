@@ -1,0 +1,51 @@
+CFLAGS += -g
+LDFLAGS += -lczmq -lzmq -lrt
+
+all: build
+build: zmtpdump test_zmtpdump
+zmtpdump: \
+  prog.o analyzetcp.o cset.o analyzezmtp.o buffer.o
+	$(CC) -o $@ \
+	  prog.o analyzetcp.o cset.o analyzezmtp.o buffer.o \
+	  -lpcap $(LDFLAGS)
+
+.PHONEY: test
+.PHONEY: check
+check: test
+test : test_zmtpdump
+	./test_zmtpdump
+test_zmtpdump: \
+  AllTests.o CuTest.o test_zmtp.o test_buffer.o test_zhash.o \
+  analyzezmtp.o buffer.o cset.o analyzetcp.o \
+  test_tcp.o
+	$(CC) -o $@ \
+	  analyzezmtp.o buffer.o cset.o analyzetcp.o \
+	  AllTests.o CuTest.o test_zmtp.o test_buffer.o test_zhash.o \
+	  test_tcp.o \
+	  $(LDFLAGS)
+
+test_zmtppacket.o: test_zmtppacket.c
+	$(CC) $(CFLAGS) -o $@ -c test_zmtppacket.c
+
+prog.o: prog.c
+	$(CC) $(CFLAGS) -o $@ -c prog.c
+
+analyzetcp.o: analyzetcp.c
+	$(CC) $(CFLAGS) -o $@ -c analyzetcp.c
+
+cset.o: cset.c
+	$(CC) $(CFLAGS) -o $@ -c cset.c
+
+analyzezmtp.o: analyzezmtp.c
+	$(CC) $(CFLAGS) -o $@ -c analyzezmtp.c
+
+buffer.o: buffer.c
+	$(CC) $(CFLAGS) -o $@ -c buffer.c
+
+clean:
+	rm -f *.o zmtpdump test_zmtpdump
+
+rebuild: clean build
+
+run: build
+	./prog lo 7001

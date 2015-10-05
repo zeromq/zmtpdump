@@ -9,6 +9,10 @@ zmtpdump is meant to be used for the purpose of learning the low-level
 details of ZeroMQ and for any time you need to analyze ZeroMQ communication,
 for example when debugging.
 
+## License
+
+This project uses the MPL v2 license, see LICENSE.
+
 ### What zmtpdump does
 
 zmtpdump listens on the specified network interface and ports and reports
@@ -63,6 +67,12 @@ is the syntax of pcap filters.
 
 Note that zmtpdump has to be run as root or with sudo, because network
 packet capturing is considered privileged operation.
+
+## Contribution process
+
+* C4 process is at http://rfc.zeromq.org/spec:16.
+* All commits are be backed by issues.
+* All commits are made as pull requests from forked work repository.
 
 ### Verbose flag
 

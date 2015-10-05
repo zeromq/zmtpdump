@@ -295,13 +295,13 @@ received data until it assembles a full ZMTP packet.
 
 ## Unit test
 
-I developed zmtpdump TDD-style, bottom-up, starting with a buffer for
+zmtpdump was developed TDD-style, bottom-up, starting with a buffer for
 accumulating received bytes. The unit test reflects that and you can run
 it by executing
 
     make check
 
-I collected test data for unit test using sender and receiver programs and
+Test data for unit test were collected using sender and receiver programs and
 Wireshark.
 
 ## References

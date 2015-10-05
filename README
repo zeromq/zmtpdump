@@ -9,6 +9,9 @@ zmtpdump is meant to be used for the purpose of learning the low-level
 details of ZeroMQ and for any time you need to analyze ZeroMQ communication,
 for example when debugging.
 
+Currently, zmtpdump runs and has been tested on Linux. Contributions for
+other *nix flavors or other OSes are welcome.
+
 ## License
 
 This project uses the MPL v2 license, see LICENSE.

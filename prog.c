@@ -151,7 +151,6 @@ usage()
     fprintf(stderr, 
 "zmtpdump\n"
 "ZMTP packet analyzer\n"
-"(C) 2015 Aleksandar Janicijevic aleks@vogonsoft.com\n"
 "Usage: zmtpdump -i <interface> [ -vh ] <filter>\n"
 "  -i <interface> - capture packets on specified interface\n"
 "                   (e.g. lo or eth0)\n"
